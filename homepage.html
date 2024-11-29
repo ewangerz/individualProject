@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/homepage.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="nav-container">
+          <a href="homepage.html" class="logo">Home</a>
+          <button class="hamburger" aria-label="Toggle navigation">
+            ☰
+          </button>
+          <div class="nav-links">
+            
+            <a class="nav-link" href="people.html">People</a>
+            <a class="nav-link" href="landscapes.html">Landscapes</a>
+            <a class="nav-link" href="about.html">About</a>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+  <main>
+    <div id="top"></div>
+    <section id="welcome">
+        <div class="overlay"></div>
+      <h1>Hi, I'm Emily!</h1>
+      <p>Welcome to my photography website!</p>
+
+      <a href="#intro" >
+        <img tabindex="0" class="skip-button" src="icons/down-arrow-svgrepo-com.svg" alt="Skip to main section" />
+    </a>
+    </section>
+    <section id = "filler">
+    </section>
+    <section id="intro" tabindex="0">
+        <div id="intro-text">
+            <h1>A little bit of background...</h1>
+        <p>When I rediscovered my parents' unused Sony A6000 camera in our basement, I took it on myself to put it to good use. 
+            Ever since then, I've been able to document so many fun experiences including vacations, various events, and more!</p>
+        </div>
+        
+    </section>
+
+    <section id = "filler2">
+    </section>
+    <section id="preview-people">
+        <grid id="preview-people-grid">
+            <div id="people-text">
+                <h2>People! :D</h2>
+                <p>Documenting my friends and I's happiest memories!</p>
+                <button onclick="window.location.href='people.html'">See More</button>
+            </div>
+            <div class="preview-grid">
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC07184.JPG" alt="John, David, Seojun, and Adrian in Chicago">
+                </div>
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC06523.JPG" alt="Faith, Jovanna, Audrey, and Sophia celebrating Jovanna's bday">
+                </div>
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC00019.JPG" alt="Angie, Angela, and Jamie taking a selfie">
+                </div>
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC06116.JPG" alt="George and Clare at Atlas Retreat">
+                </div>
+                
+                
+            </div>
+        </grid>
+        
+    </section>
+
+    <section id = "filler">
+    </section>
+    <section id="preview-people-1">
+        <grid id="preview-people-grid">
+            <div class="preview-grid">
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC02926.JPG" alt="Canyonlands National Park">
+
+                </div>
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC02371.JPG" alt="Grand Teton National Park">
+
+                </div>
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC04191.JPG" alt="Sensoji Temple in Tokyo">
+
+                </div>
+                <div class="image-tilt">
+                    <img src="images/backgrounds/DSC03071.JPG" alt="Portugal Castle of Pena">
+                </div>
+                
+            </div>
+            <div id="people-text-2">
+                <h2>Landscapes</h2>
+                <p>All the places I've been!</p>
+                <button onclick="window.location.href='landscapes.html'">See More</button>
+            </div>
+            
+        </grid>
+        
+    </section>
+
+    <section id = "filler">
+    </section>
+    <section id="preview-about">
+    <div id="about-text">
+        <h2>About Me</h2>
+      <p>Learn about my story and passion for photography.</p>
+      <button onclick="window.location.href='about.html'">See More</button>
+    </div>
+    <div class="image-tilt">
+        <img id="profile-picture" src="images/backgrounds/DSC05383.JPG" alt="Picture of myself!">
+    </div>
+    
+      
+    
+    </section>
+    <div class="back-to-top" id="backToTop" tabindex="0">
+        ↑ Back to Top
+      </div>
+  </main>
+
+  <footer>
+    <div class="footer-buttons">
+        <a href="mailto:wangemi@umich.edu" aria-label="Send an email">
+            <img class="email-button" src="icons/email-svgrepo-com.svg" alt="Email Me" />
+          </a>
+    </div>
+    
+    <p class="copyright">© 2024 Emily Wang. Coded with Javascript, Python, and HTML/CSS.</p>
+  </footer>
+  <script src="../js/modal.js"></script>
+</body>
+</html>

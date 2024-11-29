@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="nav-container">
+          <a href="homepage.html" class="logo">Home</a>
+          <button class="hamburger" aria-label="Toggle navigation">
+            ☰
+          </button>
+          <div class="nav-links">
+            <a href="about.html">About</a>
+            <a href="people.html">People Pictures</a>
+            <a href="landscapes.html">Landscape Pictures</a>
+          </div>
+        </div>
+      </nav>
+  </header>
+
+  <main>
+    <section id="introduction">
+      <h1>About Me</h1>
+      <p>I’m a passionate photographer...</p>
+    </section>
+    <section id="motivation">
+      <h2>My Motivation</h2>
+      <p>Why I love capturing moments...</p>
+    </section>
+    <section id="editing">
+      <h2>How I Edit</h2>
+      <p>I use a DSLR camera and Lightroom.</p>
+    </section>
+  </main>
+  <script src="../js/modal.js"></script>
+  <footer>
+    <form action="../contact_form.py" method="post">
+      <label for="message">Contact Me:</label>
+      <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </footer>
+</body>
+</html>

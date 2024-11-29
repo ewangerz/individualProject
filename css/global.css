@@ -1,0 +1,298 @@
+button {
+    font-family: 'inter';
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 50px;
+
+}
+
+button:hover {
+    background-color: rgb(164, 164, 164);
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+html,
+body {
+    overflow: visible;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a:visited {
+    color: white;
+    /* Prevent links from turning purple after being clicked */
+}
+
+/* General styling */
+nav {
+    position: static;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 10px 20px;
+    color: white;
+    /* White text for links */
+    text-decoration: none;
+    /* Remove underline */
+    padding: 10px;
+    /* Add padding for clickable area */
+    margin: 5px 5px;
+    /* Space between links */
+    /* Base font size for small screens */
+    transition: background-color 0.3s ease;
+    /* Smooth hover effect */
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: italic;
+    font-size: 15px;
+    color: white;
+    position: relative;
+    /* Needed for pseudo-element positioning */
+    margin: 5px;
+    padding: 10px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Hamburger button (hidden for large screens) */
+.hamburger {
+    display: flex;
+    font-size: 22px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+/* Base Styles (Mobile-first) */
+.nav-links {
+    display: none;
+    /* Hidden by default for small screens */
+    flex-direction: column;
+    /* Stack links vertically */
+    position: static;
+    /* Position relative to the screen */
+    top: 50px;
+    /* Align below the navbar */
+    right: 0;
+    /* Align to the left of the screen */
+    width: 200px;
+    /* Smaller width for mobile layout */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Translucent black background */
+    padding: 10px;
+    /* Add spacing inside the container */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Add shadow for depth */
+    z-index: 10;
+    /* Ensure it appears above other content */
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Position underline directly under the text */
+    height: 2px;
+    background-color: white;
+    /* Color of the underline */
+    transform: scaleX(0);
+    /* Initially hidden */
+    transform-origin: center;
+    /* Expand from the center */
+    transition: transform 0.3s ease;
+    /* Smooth transition effect */
+}
+
+nav a:hover::after {
+    transform: scaleX(0.8);
+    /* Fully expand underline on hover */
+}
+
+/* Show nav-links when active */
+.nav-links.active {
+    display: flex;
+}
+
+/*Making filler section in order to get to the right section when skip button is pressed*/
+#filler {
+    height: 200px;
+}
+
+#filler2 {
+    height: 100px;
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    /* Enable Flexbox */
+    justify-content: space-between;
+    /* Space out email icon and copyright text */
+    align-items: center;
+    /* Center items vertically */
+    padding: 20px;
+    /* Add padding inside the footer */
+    background-color: #000000;
+    /* Dark background */
+    color: white;
+    /* Text color */
+    height: 60px;
+    /* Set footer height (optional) */
+
+}
+
+footer p {
+    font-size: 14px;
+    font-family: 'inter';
+    font-style: italic;
+}
+
+/* Email Icon Styling */
+.email-button {
+    width: 30 px;
+    /* Set icon size */
+    height: 30px;
+    /* Set icon size */
+    margin-right: 10px;
+    /* Add some spacing between the icon and the edge */
+}
+
+/* Back-to-Top Button Styling */
+.back-to-top {
+    position: fixed;
+    /* Stays in a fixed position while scrolling */
+    bottom: 120px;
+    /* Distance from the bottom of the screen */
+    right: 20px;
+    /* Distance from the right of the screen */
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Semi-transparent black background */
+    color: white;
+    /* Text color */
+    font-size: 14px;
+    border-radius: 5px;
+    /* Rounded corners */
+    cursor: pointer;
+    z-index: 1000;
+    /* Ensure it stays on top of other elements */
+    display: none;
+    /* Initially hidden */
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Button Hover Effect */
+.back-to-top:hover {
+    background-color: rgba(50, 50, 50, 0.9);
+    /* Slightly lighter background */
+}
+
+/* Show Button When Active */
+.back-to-top.show {
+    display: block;
+    /* Show button when scrolling */
+    opacity: 1;
+    /* Smooth fade-in */
+    visibility: visible;
+}
+
+/* Optional: Add Hover Effect to Email Icon */
+footer a:hover .email-button {
+    transform: scale(1.1);
+    /* Slightly enlarge on hover */
+    transition: transform 0.3s ease;
+}
+
+.footer-buttons {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.footer-buttons button {
+    font-size: 13px;
+    padding: 1px 8px;
+    border-radius: 30px;
+}
+
+
+/* Styles for medium screens and larger (min-width: 600px) */
+@media (min-width: 600px) {
+
+    .hamburger {
+        display: none;
+    }
+
+
+    .nav-links {
+        display: flex;
+        /* Show links as a row on larger screens */
+
+        /* Reset positioning for inline layout */
+        width: auto;
+        /* Allow the links to take natural width */
+        background-color: transparent;
+        /* Remove background color */
+        flex-direction: row;
+        /* Align links horizontally */
+        gap: 15px;
+        /* Add space between links */
+        padding: 0;
+        /* Remove extra padding */
+        box-shadow: none;
+        /* Remove shadow */
+    }
+
+    footer p {
+        font-size: 18px;
+
+    }
+
+    .nav-links a {
+        margin: 0;
+        /* Reset margins for inline layout */
+        /* Slightly larger font size for readability */
+    }
+}
+
+/* Styles for large screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+    nav a {
+        font-size: 18px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+
+
+    .nav-links {
+        gap: 20px;
+        /* Increase spacing between links */
+    }
+
+}

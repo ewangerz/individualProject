@@ -1,0 +1,368 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+p,
+h1,
+h2 {
+    text-shadow: 0 0 20px rgba(232, 221, 221, 0.2), 0 0 30px rgba(193, 196, 200, 0.2);
+}
+
+.image-tilt {
+    perspective: 1000px;
+    /* Creates a 3D perspective */
+    display: inline-block;
+}
+
+.image-tilt img {
+    transition: transform 0.2s ease;
+    transform-origin: center;
+}
+
+img {
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    /* Smooth transition */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    /* Indicate interactivity */
+}
+
+
+
+section {
+    width: 100vw;
+    /* Full width of the viewport */
+    height: 200px;
+    /* Fixed height */
+    display: flex;
+    /* Use Flexbox */
+    align-items: center;
+    /* Vertically center content */
+    justify-content: center;
+    /* Horizontally center content */
+
+}
+
+a {
+    font-family: 'Inter';
+}
+
+/* WELCOME SECTION STYLING */
+#welcome {
+    height: 560px;
+    background-image: url(../images/backgrounds/DSC03702.JPG);
+    background-position: center;
+    text-shadow: 0 0 20px rgba(232, 221, 221, 0.2), 0 0 30px rgba(193, 196, 200, 0.2);
+    color: rgb(255, 255, 255);
+    /* Text color */
+    font-size: 24px;
+    /* Font size for content */
+    text-align: center;
+    /* Center-align text */
+    flex-direction: column;
+    gap: 0px;
+    padding-top: 50px;
+}
+
+#welcome h1 {
+    font-size: 40px;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+#welcome p {
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 120px;
+    font-style: italic;
+    font-size: 20px;
+}
+
+
+#welcome h1,
+#welcome p,
+.skip-button,
+nav {
+    position: relative;
+    z-index: 2;
+    /* Place text above the overlay */
+}
+
+/* Place text above the overlay */
+#welcome::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0.5);
+    /* Add a semi-transparent black overlay */
+    z-index: -1;
+    /* Place the overlay behind text */
+
+}
+
+/* Skip to Main Content Button */
+.skip-button {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    /* Position relative to #welcome */
+    bottom: 50px;
+    /* Distance from the bottom of the section */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Adjust for centering */
+    font-size: 30px;
+    /* Size of the button */
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Button color */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: transform 0.3s ease;
+    /* Add smooth hover effect */
+}
+
+/* Hover Effect */
+.skip-button:hover {
+    transform: scale(1.05) translateX(-50%);
+    /* Enlarge on hover */
+    color: lightblue;
+    /* Change color on hover */
+}
+
+/* Optional: Focus Style for Accessibility */
+.skip-button:focus {
+    outline: 2px dashed white;
+    outline-offset: 4px;
+}
+
+
+
+/*INTRO SECTION STYLING*/
+#intro {
+    text-align: center;
+    /* Center-align text */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+
+
+}
+
+#intro h1 {
+    font-size: 20px;
+}
+
+#intro p,
+#intro h1 {
+
+    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-style: italic;
+    z-index: 2;
+}
+
+#intro p {
+    font-size: 15px;
+}
+
+#intro-text {
+    background-image: url(../images/backgrounds/DSC03769-EDIT\ \(1\).jpg);
+    background-position: 50% 60%;
+    padding: 100px;
+    z-index: 2;
+}
+
+/* PEOPLE PREVIEW STYLING */
+#preview-people,
+#preview-people-1,
+#preview-about {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+#preview-people {
+    background-image: url(../images/backgrounds/DSC01383.JPG);
+}
+
+#preview-people-1 {
+    background-image: url(../images/backgrounds/DSC02124.JPG);
+}
+
+#preview-people-grid {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+#people-text {
+    margin: 30px;
+}
+
+#people-text h2,
+#people-text-2 h2,
+#about-text h2 {
+    font-size: 27px;
+    margin-bottom: 0px;
+}
+
+#people-text p,
+#people-text-2 p,
+#about-text p {
+    font-size: 15px;
+}
+
+#people-text-2 {
+    margin: 30px;
+    padding-right: 20px;
+}
+
+
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 10px;
+    margin: 30px;
+}
+
+.preview-grid img {
+    height: 120px;
+    width: 120px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Adjust opacity as needed */
+    z-index: 1;
+    /* Place overlay above the background image */
+}
+
+
+/* ABOUT ME SECTION */
+#preview-about {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/backgrounds/DSC01383.JPG);
+    background-position: center;
+}
+
+#profile-picture {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+#about-text {
+    margin: 30px;
+}
+
+
+
+
+
+@media (min-width: 750px) {
+    #welcome h1 {
+        font-size: 60px;
+
+    }
+
+    .skip-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    #intro h1 {
+        font-size: 25px;
+    }
+
+    #intro p {
+        margin-left: 150px;
+        margin-right: 150px;
+        font-size: 20px;
+    }
+
+    .preview-grid img {
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+    }
+
+    #preview-people,
+    #preview-people-1,
+    #preview-about {
+        height: 500px;
+        padding-bottom: 20px;
+    }
+
+
+    #preview-people h2,
+    #preview-people-1 h2,
+    #preview-about h2 {
+        font-size: 50px;
+    }
+
+    #preview-people p,
+    #preview-people-1 p,
+    #preview-about p {
+        font-size: 20px;
+    }
+
+
+
+
+
+    button {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    #profile-picture {
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media (min-width: 1050px) {
+    #intro h1 {
+        font-size: 30px;
+    }
+
+    #intro p {
+        margin-left: 150px;
+        margin-right: 150px;
+        font-size: 25px;
+    }
+}

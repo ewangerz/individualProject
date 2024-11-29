@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Galleries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/gallery.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+        <div class="nav-container">
+          <a href="homepage.html" class="logo">Home</a>
+          <button class="hamburger" aria-label="Toggle navigation">☰</button>
+          <div class="nav-links">
+            <a href="people.html">People</a>
+            <a href="landscapes.html">Landscapes</a>
+            <a href="about.html">About</a>
+          </div>
+        </div>
+    </nav>
+  </header>
+
+  <main>
+  <section id="title-section2">
+        
+        <h1>Landscapes!</h1>
+        <h2>Some of the coolest places I've been!</h2>
+        <a href="#europe" >
+        <img class="skip-button" src="icons/down-arrow-svgrepo-com.svg" alt="Skip to main section" tabindex="0"/>
+        </a>
+    </section>
+
+        <div id="filler2"></div>
+        <section class="gallery-section" id="europe">
+            <h1>Europe</h1>
+            <p></p>
+            <div class="grid">
+         <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03295.JPG' alt='Basket Weaver in Budapest, Hungary' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03288.JPG' alt='Fishermans Bastion in Budapest, Hungary' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03166.JPG' alt='Kursalon Hübner in Vienna, Austria' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03071.JPG' alt='Palácio Nacional da Pena in Sintra, Portugal' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03274.JPG' alt='Passau in Bavaria, Germany' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC02970.JPG' alt='Outlook of Lisbon, Portugal' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03306.JPG' alt='Matthias Church (Mátyás-templom) in Budapest, Hungary' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container"tabindex="0" >
+            <img src='images/landscape/eu/DSC03089.JPG' alt='Architecture detail of Pena Palace in Portugal' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03128.JPG' alt='Street cat in Rome, Italy' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03243.JPG' alt='Beautiful flowers in Germany' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03216.JPG' alt='Hofburg Palace in Vienna, Austria' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/eu/DSC03050.JPG' alt='More of Pena Palace in Portugal' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                        </div>
+        </section>
+        
+        <div id="filler2"></div>
+        <section class="gallery-section">
+            <h1>Asia</h1>
+            <p></p>
+            <div class="grid">
+         <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC03932.JPG' alt='Wall detailing in Quanzhou, China' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC03727.JPG' alt='GuLangYu an island near Xiamen, China' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC03420.JPG' alt='Swans near Nanjing, China' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04141.JPG' alt='Small ramen shop in Ginza, Tokyo' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04191.JPG' alt='Senso-ji Temple in Tokyo, Japan' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04371.JPG' alt='German writing in Ueno Park, Tokyo' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC01377.JPG' alt='Goat in the village my grandma lives in' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC03661.JPG' alt='Temple in Xiamen' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC01331.JPG' alt='Claw machine store in Xi an, China' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04328.JPG' alt='Goldfish in Japan' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04403.JPG' alt='Busy street in Ueno, Tokyo' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC01361.JPG' alt='Girl in Yongshou eating watermelon' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04364.JPG' alt='Temple in Ueno, Tokyo' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04555.JPG' alt='Panda from Ueno Zoo' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC01408.JPG' alt='Flower field in Yongshou' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04296.JPG' alt='Jellyfish in Tokyo' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC04076.JPG' alt='Buddhist temple in Quanzhou, China' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/a/DSC03647.JPG' alt='Bright alleyway in Xiamen, China' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                        </div>
+        </section>
+        
+        <div id="filler2"></div>
+        <section class="gallery-section">
+            <h1>US</h1>
+            <p></p>
+            <div class="grid">
+         <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02356.JPG' alt='Butterfly in Colorado' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02945.JPG' alt='Canyonlands National Park in Utah' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02423.JPG' alt='River in Yellowstone National Park, Wyoming' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02286.JPG' alt='Wetlands near where I stayed in Yellowstone, Wyoming' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02905.JPG' alt='Canyonlands National Park in Utah' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02624.JPG' alt='River in Yellowstone National Park, Wyoming' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02725.JPG' alt='Capitol Reef National Park in Utah' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC04432.JPG' alt='Canoes and Kayaks in Florida' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02000.JPG' alt='Mammoth Hot Springs in Yellowstone, Wyoming' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02818.JPG' alt='Balanced Rock in Arches National Park, Utah' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC03959.JPG' alt='Small beach in Florida' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                     <div class="image-container" tabindex="0">
+            <img src='images/landscape/us/DSC02562.JPG' alt='Geyser at Yellowstone, Wyoming' class='grid-image' onclick='openPopup(this)'>
+            <div class="overlay-text"></div>
+            </div>
+                        </div>
+        </section>
+        
+<div class="back-to-top" id="backToTop" tabindex="0">
+        ↑ Back to Top
+      </div>
+  </main>
+    <!-- Popup for Enlarged Image -->
+  <div id="image-popup" class="popup">
+    <span class="close-popup" onclick="closePopup()">×</span>
+    <div class="img-caption">
+        <img class="popup-image" id="popup-image" src="" alt="DSC02562">
+
+    </div>
+  </div>
+
+
+  <footer>
+    <a href="mailto:wangemi@umich.edu" aria-label="Send an email">
+      <img class="email-button" src="icons/email-svgrepo-com.svg" alt="Email Me" />
+    </a>
+    <p class="copyright">© 2024 Emily Wang. Coded with Javascript, Python, and HTML/CSS.</p>
+  </footer>
+
+  <script src="../js/modal.js"></script>
+</body>
+</html>

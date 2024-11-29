@@ -1,0 +1,365 @@
+section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+}
+
+#title-section,
+#title-section2 {
+    height: 500px;
+    display: flex;
+    padding-top: 100px;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+
+    background-position: 90% 50%;
+}
+
+#title-section {
+    background-image: url(../images/backgrounds/DSC06905.JPG);
+    background-position: 60% 50%;
+}
+
+#title-section2 {
+    background-image: url(../images/backgrounds/DSC05043.JPG);
+    background-position: center;
+}
+
+#title-section h1,
+#title-section2 h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#title-section h2,
+#title-section2 h2 {
+    font-size: 20px;
+    margin-top: 5px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 300px;
+}
+
+/* Skip to Main Content Button */
+.skip-button {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    /* Position relative to #welcome */
+    bottom: 50px;
+    /* Distance from the bottom of the section */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Adjust for centering */
+    font-size: 30px;
+    /* Size of the button */
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Button color */
+    cursor: pointer;
+    /* Change cursor to pointer */
+    transition: transform 0.3s ease;
+    /* Add smooth hover effect */
+}
+
+/* Hover Effect */
+.skip-button:hover {
+    transform: scale(1.05) translateX(-50%);
+    /* Enlarge on hover */
+    color: lightblue;
+    /* Change color on hover */
+}
+
+/* Optional: Focus Style for Accessibility */
+.skip-button:focus {
+    outline: 2px dashed white;
+    outline-offset: 4px;
+}
+
+.gallery-section {
+    padding: 30px;
+}
+
+.gallery-section h1 {
+    margin-bottom: 10px;
+}
+
+.gallery-section p {
+    margin-bottom: 30px;
+}
+
+.grid {
+    display: grid;
+    /* Enable grid layout */
+    grid-template-columns: repeat(2, 1fr);
+    /* Create 2 equal-width columns */
+    gap: 10px;
+    /* Add spacing between images */
+    justify-items: center;
+    /* Horizontally center images */
+    align-items: center;
+    /* Vertically center images */
+}
+
+.grid img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.image-container {
+    position: relative;
+    /* Needed for positioning text overlay */
+    overflow: hidden;
+    /* Prevent text or hover effects from exceeding container */
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+    /* Smooth darkening effect */
+}
+
+.image-container:hover img {
+    opacity: 0.5;
+    /* Darken image on hover */
+}
+
+/* Text Overlay */
+.image-container .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    /* Prevent text from interfering with hover */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in effect */
+}
+
+.image-container:hover .overlay-text {
+    opacity: 1;
+    /* Show text on hover */
+}
+
+.back-to-top {
+    bottom: 80px;
+    /* Distance from the bottom of the screen */
+
+
+}
+
+/* Popup Styles */
+.popup {
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Dark background */
+    z-index: 1000;
+    /* Ensure it appears above all other content */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup img {
+    width: 400px;
+    height: 250px;
+    border-radius: 10px;
+    /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Add shadow for effect */
+    object-fit: cover;
+}
+
+.popup .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 1100;
+    /* Ensure it appears above the image */
+    transition: color 0.3s ease;
+}
+
+.popup .close-popup:hover {
+    color: rgb(135, 135, 135);
+    /* Highlight close button on hover */
+}
+
+.img-caption {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px;
+}
+
+.img-caption p {
+    font-size: 15px;
+    margin-bottom: 0px;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Collapsible Button */
+.collapsible {
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible.active {
+    background-color: #666;
+}
+
+/* Collapsible Content */
+.collapsible-content {
+    max-height: 0;
+    /* Collapsed by default */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+    padding: 0 10px;
+}
+
+.collapsible-content .grid {
+    padding: 10px 0;
+}
+
+
+@media (min-width: 600px) {
+    #title-section h1 {
+        font-size: 45px;
+    }
+
+    .gallery-section h1,
+    .gallery-section p {
+        width: 70%;
+    }
+
+    .grid img {
+        width: 260px;
+        height: 180px;
+    }
+
+    .skip-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .popup img {
+        width: 500px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .popup p {
+        font-size: 23px;
+    }
+
+    #title-section h1,
+    #title-section2 h1 {
+        font-size: 40px;
+
+    }
+
+    #title-section {
+        background-position: 60% 50%;
+    }
+
+}
+
+@media (min-width: 800px) {
+    .grid img {
+        width: 360px;
+        height: 240px;
+    }
+
+    .popup img {
+        width: 600px;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    .popup p {
+        font-size: 27px;
+    }
+
+    #title-section h1,
+    #title-section2 h1 {
+        font-size: 45px;
+
+    }
+
+    #title-section {
+        background-position: 70% 50%;
+    }
+}
+
+@media (min-width: 1054px) {
+
+    .gallery-section h1,
+    .gallery-section p {
+        width: 50%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+    .popup img {
+        width: 600px;
+        height: 450px;
+        object-fit: cover;
+    }
+
+    #title-section h1,
+    #title-section2 h1 {
+        font-size: 50px;
+
+    }
+
+    #title-section {
+        background-position: 80% 50%;
+    }
+}
