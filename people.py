@@ -103,7 +103,7 @@ def generate_multiple_galleries(section_folders):
     <p class="copyright">© 2024 Emily Wang. Coded with Javascript, Python, and HTML/CSS.</p>
   </footer>
 
-  <script src="../js/modal.js"></script>
+  <script src="js/modal.js"></script>
 </body>
 </html>"""
     return html_content
