@@ -5,6 +5,12 @@ section {
     justify-items: center;
 }
 
+p,
+h1,
+h2 {
+    text-shadow: 0 0 20px rgba(232, 221, 221, 0.2), 0 0 30px rgba(193, 196, 200, 0.2);
+}
+
 #title-section,
 #title-section2 {
     height: 500px;
@@ -134,7 +140,7 @@ section {
 }
 
 .image-container:hover img {
-    opacity: 0.5;
+    opacity: 0.2;
     /* Darken image on hover */
 }
 
