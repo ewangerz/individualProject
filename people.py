@@ -51,6 +51,7 @@ def generate_multiple_galleries(section_folders):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Galleries</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="icon" href="icons/photo-camera-svgrepo-com (1).svg" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/gallery.css">

@@ -161,6 +161,7 @@ h2 {
     /* Initially hidden */
     transition: opacity 0.3s ease;
     /* Smooth fade-in effect */
+    background-color: rgba(0, 0, 0, .1)
 }
 
 .image-container:hover .overlay-text {
