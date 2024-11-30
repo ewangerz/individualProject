@@ -139,10 +139,27 @@ nav a:hover::after {
 /*Making filler section in order to get to the right section when skip button is pressed*/
 #filler {
     height: 200px;
+    margin: auto;
+    text-align: center;
+    width: 90%;
 }
 
 #filler2 {
     height: 100px;
+    margin: auto;
+    text-align: center;
+    width: 90%;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+#cur-page {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 2px;
+    -moz-text-decoration-line: ;
 }
 
 /* Footer Styling */

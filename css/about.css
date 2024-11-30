@@ -1,0 +1,512 @@
+body {
+    overflow-x: hidden;
+}
+
+section {
+    width: 100vw;
+    /* Full width of the viewport */
+    height: auto;
+    /* Allow flexible height based on content */
+    display: flex;
+    /* Use Flexbox */
+    position: relative;
+    flex-direction: column;
+}
+
+p {
+    font-style: italic;
+}
+
+/* Introduction Section */
+#introduction {
+    height: auto;
+    background-position: center;
+    align-items: center;
+    /* Vertically center content */
+    justify-content: center;
+    /* Horizontally center content */
+    text-shadow: 0 0 20px rgba(232, 221, 221, 0.2), 0 0 30px rgba(193, 196, 200, 0.2);
+    color: rgb(255, 255, 255);
+    /* Text color */
+    font-size: 24px;
+    /* Font size for content */
+    text-align: center;
+    /* Center-align text */
+    flex-direction: column;
+    gap: 0px;
+    margin: 80px auto;
+}
+
+#introduction a {
+    font-family: 'Inter';
+    font-weight: 600;
+    font-style: italic;
+    color: white;
+    position: relative;
+    transition: color 0.2s;
+    /* Needed for pseudo-element positioning */
+}
+
+#introduction a:hover {
+    color: rgb(182, 182, 182);
+}
+
+#intro-text {
+    width: 80%;
+    text-align: center;
+}
+
+#introduction h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#introduction h2 {
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 250px;
+    /* Set the width of the image box */
+    height: 250px;
+    /* Set the height of the image box */
+    overflow: hidden;
+    border-radius: 5000px;
+}
+
+/* Slide style */
+.slide {
+    display: none;
+    /* Hide all slides initially */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* Image styling within the slide */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Adjust the image to fill the box */
+}
+
+/* Fade animation for transitions */
+.fade {
+    animation: fadeEffect 1s;
+}
+
+.slide:hover img {
+    opacity: 0.2;
+    /* Darken image on hover */
+}
+
+/* Text Overlay */
+.slide .overlay-text1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    /* Prevent text from interfering with hover */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in effect */
+    background-color: rgba(0, 0, 0, .1);
+    z-index: 2000;
+}
+
+.slide:hover .overlay-text1 {
+    opacity: 1;
+    z-index: 1000;
+    /* Show text on hover */
+}
+
+/* FAQ Section Styling */
+#faqs {
+    max-width: 90%;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    padding: 20px;
+}
+
+#faqs h1 {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+/* FAQ Items */
+.faq-item {
+    padding: 15px;
+    border-radius: 5px;
+
+}
+
+/* FAQ Question Button */
+.faq-question {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.faq-question:hover {
+    background-color: #f0f0f0;
+}
+
+/* Icon Styling */
+.faq-icon {
+    font-size: 25px;
+    font-weight: bold;
+    transition: transform 0.4s ease;
+}
+
+/* Rotate icon for "open" state */
+.faq-question.active .faq-icon {
+    transform: rotate(90deg);
+    /* Smooth rotation from "+" to "×" */
+}
+
+/* FAQ Answer */
+.faq-answer {
+    max-height: 0;
+    /* Start with hidden answer */
+    overflow: hidden;
+    /* Prevent content from showing when hidden */
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.expanded {
+    max-height: 500px;
+    /* Allow height to fit larger content */
+    padding: 10px 15px;
+}
+
+/* Additional Content Section */
+.additional-content {
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 5px;
+}
+
+#favorites {
+
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    padding: 0px;
+    margin: auto;
+
+}
+
+#favorites h1 {
+    margin-bottom: 10px;
+}
+
+#filler2 {
+    height: 100px;
+}
+
+/* Carousel container styling */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    /* Full width carousel */
+    overflow: hidden;
+    /* Hide overflow */
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Carousel styling */
+.carousel {
+    display: flex;
+    /* Align items horizontally */
+    gap: 10px;
+    /* Space between items */
+    transition: transform 0.5s ease-in-out;
+    /* Smooth scrolling */
+}
+
+/* Carousel item styling */
+.carousel-item {
+    flex: 0 0 calc(33.333% - 10px);
+    /* Show 3 items with spacing */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Shadow */
+}
+
+.carousel-item img {
+    width: 100%;
+    /* Ensure the image fills the carousel item */
+    height: auto;
+    display: block;
+    object-fit: cover;
+    /* Crop and maintain aspect ratio */
+}
+
+.carousel-item img:hover {
+    opacity: 0.2;
+}
+
+/* Overlay text styling */
+.carousel-item .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    pointer-events: none;
+    /* Prevent text from interfering with hover */
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Smooth fade-in effect */
+    background-color: rgba(0, 0, 0, .1);
+    z-index: 2000;
+}
+
+.carousel-item:hover .overlay-text {
+    opacity: 1;
+    /* Show overlay text on hover */
+}
+
+/* Arrow button styling */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    opacity: 1;
+    /* Visible by default */
+    object-fit: center;
+    pointer-events: all;
+}
+
+.carousel-arrow img {
+    height: 20px;
+    width: 20px;
+}
+
+.carousel-arrow:disabled {
+    opacity: 0;
+    /* Make disabled arrows semi-transparent */
+    pointer-events: none;
+    /* Disable pointer events for inactive arrows */
+}
+
+.carousel-arrow.left-arrow {
+    left: 20px;
+}
+
+.carousel-arrow.right-arrow {
+    right: 20px;
+}
+
+.carousel-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+/* Smooth slide-down animation */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        opacity: 1;
+        max-height: 200px;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+#thanks {
+    display: flex;
+    margin: auto auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    font-size: 12px;
+    text-align: center;
+    width: 70%;
+
+}
+
+#thanks img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.2 ease;
+
+}
+
+#thanks img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate360 1s ease-in-out;
+}
+
+.faq-question:focus {
+    background-color: rgba(189, 189, 189, 0.9);
+}
+
+/* Responsive Design */
+@media (min-width: 750px) {
+    #intro-text {
+        width: 40%;
+        text-align: left;
+    }
+
+    #introduction {
+        flex-direction: row;
+        gap: 35px;
+    }
+
+    .slideshow-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    #intro-text h1 {
+        font-size: 25px;
+    }
+
+    #intro-text h2 {
+        font-size: 15px;
+    }
+
+    #faqs button {
+        font-size: 20px;
+    }
+
+    #faqs p {
+        font-size: 20px;
+    }
+
+    .carousel-arrow {
+        font-size: 40px;
+    }
+
+    .carousel-item .overlay-text {
+        font-size: 16px;
+    }
+
+    #thanks {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1054px) {
+    #introduction {
+        gap: 70px;
+    }
+
+    #intro-text {
+        width: 45%;
+        padding-right: 10px;
+    }
+
+    #intro-text h1 {
+        font-size: 40px;
+    }
+
+    #intro-text h2 {
+        font-size: 20px;
+    }
+
+    .slideshow-container {
+        width: 400px;
+        height: 400px;
+    }
+
+    .carousel-arrow img {
+        height: 28px;
+        width: 28px;
+    }
+
+    .carousel-arrow {
+        height: 50px;
+        width: 50px;
+
+    }
+
+
+}

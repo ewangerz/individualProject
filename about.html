@@ -5,50 +5,192 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="icon" href="icons/photo-camera-svgrepo-com (1).svg" type="image/x-icon">
+  <link rel="icon" href="icons/star-svgrepo-com.svg" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/about.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav>
-        <div class="nav-container">
-          <a href="homepage.html" class="logo">Home</a>
-          <button class="hamburger" aria-label="Toggle navigation">
-            ☰
-          </button>
-          <div class="nav-links">
-            <a href="about.html">About</a>
-            <a href="people.html">People Pictures</a>
-            <a href="landscapes.html">Landscape Pictures</a>
-          </div>
+      <div class="nav-container">
+        <a href="homepage.html" class="logo">★</a>
+        <button class="hamburger" aria-label="Toggle navigation">☰</button>
+        <div class="nav-links">
+            
+          <a class="nav-link" href="people.html">People</a>
+          <a class="nav-link" href="landscapes.html">Landscapes</a>
+          <a class="nav-link" href="about.html" id="cur-page">About</a>
         </div>
-      </nav>
+      </div>
+  </nav>
   </header>
 
   <main>
     <section id="introduction">
-      <h1>About Me</h1>
-      <p>I’m a passionate photographer...</p>
+      <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="images/about/5F3672E0-0F5B-4992-B9AC-209307320A93.jpg" alt="Emily in Tokyo">
+            <div class="overlay-text1"></div>
+        </div>
+        <div class="slide fade">
+            <img src="images/about/DSC00865.JPG" alt="Emily in Colorado">
+            <div class="overlay-text1"></div>
+        </div>
+        <div class="slide fade">
+            <img src="images/about/DSC01130.JPG" alt="Emily in East Lansing">
+            <div class="overlay-text1"></div>
+        </div>
+        <div class="slide fade">
+          <img src="images/about/DSC06778.JPG" alt="Emily in Chicago">
+          <div class="overlay-text1"></div>
+        </div>
+        <div class="slide fade">
+          <img src="images/about/DSC07590.JPG" alt="Emily in Ann Arbor">
+          <div class="overlay-text1"></div>
+        </div>
+        <div class="slide fade">
+          <img src="images/about/DSC04746.JPG" alt="Emily in Florida">
+          <div class="overlay-text1"></div>
+        </div>
+    </div>
+      <div id="intro-text">
+        <h1>Hello hello! ★</h1>
+        <h2>I'm Emily Wang, a current student at the University of Michigan studying Data Science and Mathematics.
+        </h2>
+        <h2>One of my biggest passions is documenting all my experiences to look back at in the future. All of the photos you see have been taken on my digital camera!</h2>
+        <h2>For more about me, <a href="#faqs">scroll down!</a></h2>
+
+      </div>
+      
+      
     </section>
-    <section id="motivation">
-      <h2>My Motivation</h2>
-      <p>Why I love capturing moments...</p>
+    <section id="filler2">
+      <p>★★★</p>
     </section>
-    <section id="editing">
-      <h2>How I Edit</h2>
-      <p>I use a DSLR camera and Lightroom.</p>
+    <section id="faqs">
+      <h1>In case you're curious...</h1>
+      <div class="faq-item">
+        <button class="faq-question" tabindex="0">
+            What camera do I use?
+            <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+            <p>I use a Sony a6000 camera with the default lens. It is definitely on the pricier slide
+              however, I think it is extremely worth it for the longevity.
+            </p>
+        </div>
+        <button class="faq-question" tabindex="0" >
+          What do I use to edit photos?
+          <span class="faq-icon">+</span>
+      </button>
+        <div class="faq-answer" tabindex="0">
+            <p>Not gonna lie, I don't exactly have time to edit all the photos I take. I usually
+              just use the program auto mode on the camera which has worked well. Also, flash is a life saver!
+            </p>
+        </div>
+        <button class="faq-question">
+          How many photos have I taken?
+          <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+          <p>I don't know an exact number, but I am at around 200 GB of storage used on my Google Photos account. 
+            I don't like deleting photos which can be a problem at times.
+          </p>
+      </div>
+    </div>
     </section>
+    <section id="filler2" class="additional-content">
+      <p>★★★</p>
+    </section>
+    <section class="additional-content" id="favorites">
+      <h1>From my favorites folder &hearts;</h1>
+      <p>Click through to see some of my favorite pictures of my friends and me!</p>
+    </section>
+
+    <div class="carousel-container">
+      <button class="carousel-arrow left-arrow" disabled alt="left button"><img alt="left arrow" src="icons/right-arrow-svgrepo-com (2).svg"></button>
+      <div class="carousel">
+          <div class="carousel-item">
+              <img src="images/about/carousel/DSC00133.JPG" alt="John, Seojun, Adrian, David, and me on Halloween!">
+              <div class="overlay-text">Image 1</div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/about/carousel/DSC00687.JPG" alt="Tiff, Jiyi, and me at Watson's Birthday">
+              <div class="overlay-text">Image 2</div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/about/carousel/DSC01303.JPG" alt="Chennie and me in her lovely car">
+              <div class="overlay-text">Image 3</div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/about/carousel/DSC02051.JPG" alt="Jiyi and me at Atlas retreat">
+              <div class="overlay-text">Image 4</div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/about/carousel/DSC02916.JPG" alt="Gameday with Mafalda and Lucia">
+              <div class="overlay-text">Image 5</div>
+          </div>
+          <div class="carousel-item">
+              <img src="images/about/carousel/DSC04896.JPG" alt="Rock climbing with Chennie, Ash, Alex, and Ben">
+              <div class="overlay-text">Image 6</div>
+          </div>
+          <div class="carousel-item">
+            <img src="images/about/carousel/DSC06040.JPG" alt="Sam and me at the Big House">
+            <div class="overlay-text">Image 6</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/about/carousel/DSC06932.JPG" alt="Fanny and me in Chicago">
+          <div class="overlay-text">Image 6</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/about/carousel/DSC08029.JPG" alt="Gavin, Kumi, Liv, Sarah, and me at Flynn's birthday">
+          <div class="overlay-text">Image 6</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/about/carousel/DSC08070.JPG" alt="Shanshan and me at big/little">
+          <div class="overlay-text">Image 6</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/about/carousel/DSC08345.JPG" alt="Sarah, Joy and me in Markley">
+          <div class="overlay-text">Image 6</div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/about/carousel/DSC09846.JPG" alt="Katia and me in Evanston">
+          <div class="overlay-text">Image 6</div>
+        </div>
+      </div>
+      <button class="carousel-arrow right-arrow" alt="right button"><img alt="right arrow" src="icons/right-arrow-svgrepo-com (1).svg"></button>
+  </div>
+  
+      
+      
+  </div>
+</section>
+<section id="filler2">
+</section>
+<section id="thanks">
+  <h1>Thanks for stopping by! Here's some cake! </h1>
+  <img class="rotating-box" id="cake" alt="Cupcake for you!" src="icons/cake-svgrepo-com.svg"  tabindex="0">
+</section>
+<div class="back-to-top" id="backToTop" tabindex="0">
+  ↑ Back to Top
+</div>
   </main>
-  <script src="../js/modal.js"></script>
-  <footer>
-    <form action="../contact_form.py" method="post">
-      <label for="message">Contact Me:</label>
-      <textarea id="message" name="message" rows="4" cols="50" placeholder="Your message"></textarea>
-      <button type="submit">Send</button>
-    </form>
+  <footer class="additional-content">
+    <div class="footer-buttons">
+        <a href="mailto:wangemi@umich.edu" aria-label="Send an email">
+            <img class="email-button" src="icons/email-svgrepo-com.svg" alt="Email Me" />
+          </a>
+    </div>
+    
+    <p class="copyright">© 2024 Emily Wang. Coded with Javascript, Python, and HTML/CSS.</p>
   </footer>
+  <script src="js/about.js">
+
+
+</script>
 </body>
 </html>
