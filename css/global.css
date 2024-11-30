@@ -159,7 +159,7 @@ nav a:hover::after {
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 2px;
-    -moz-text-decoration-line: ;
+
 }
 
 /* Footer Styling */
