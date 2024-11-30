@@ -38,7 +38,7 @@ a:visited {
 /* General styling */
 nav {
     position: static;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0);
     color: white;
     padding: 10px 20px;
     color: white;
@@ -52,6 +52,7 @@ nav {
     /* Base font size for small screens */
     transition: background-color 0.3s ease;
     /* Smooth hover effect */
+    z-index: 999;
 }
 
 nav a {
@@ -255,6 +256,89 @@ footer a:hover .email-button {
     border-radius: 30px;
 }
 
+#theme-toggle {
+    width: 50px;
+    height: 30px;
+    background-color: #595959;
+    transform: translateY(20%);
+    /* Switch background */
+    border-radius: 15px;
+    /* Make it rounded */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.icon-moon,
+.icon-sun {
+    font-size: 16px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    transition: opacity 0.2s ease-out;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+}
+
+.icon-moon {
+    left: 3px;
+    /* Position moon icon on the left */
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Show by default */
+}
+
+.icon-sun {
+    right: 4px;
+    /* Position sun icon on the right */
+    opacity: 0;
+    transform: translateY(-55%);
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Hide by default */
+}
+
+/* Toggle Button (the "switch knob") */
+#theme-toggle::after {
+    content: '';
+    width: 26px;
+    height: 26px;
+    background-color: rgb(255, 255, 255);
+    /* Knob color */
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Light Mode Styles */
+[data-theme="light"] #theme-toggle {
+    background-color: rgb(43, 42, 84);
+}
+
+[data-theme="light"] #theme-toggle::after {
+    transform: translateX(30px);
+    /* Move knob to the right */
+}
+
+[data-theme="light"] .icon-moon {
+    opacity: 0;
+    /* Hide moon icon */
+}
+
+[data-theme="light"] .icon-sun {
+    opacity: 1;
+    /* Show sun icon */
+}
+
+
 
 /* Styles for medium screens and larger (min-width: 600px) */
 @media (min-width: 600px) {
@@ -312,4 +396,89 @@ footer a:hover .email-button {
         /* Increase spacing between links */
     }
 
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable smooth scroll */
+    html {
+        scroll-behavior: auto;
+    }
+
+    /* Remove transitions from nav links */
+    nav a {
+        transition: none;
+    }
+
+    nav a::after {
+        transition: none;
+        /* Show underline statically without animation */
+    }
+
+    /* Disable hover effects on buttons */
+    button:hover,
+    .back-to-top:hover,
+    footer a:hover .email-button {
+        background-color: inherit;
+        transform: none;
+        transition: none;
+    }
+
+    /* Remove button animations */
+    button {
+        transition: none;
+    }
+
+    /* Remove back-to-top button fade and visibility transitions */
+    .back-to-top {
+        transition: none;
+    }
+
+    /* Remove email button hover effects */
+    footer a .email-button {
+        transform: none;
+        transition: none;
+    }
+
+    /* Disable footer hover effects */
+    footer a:hover .email-button {
+        transform: none;
+    }
+}
+
+/* Default (Dark Mode) Styles are as-is */
+
+/* Light Mode Styles */
+[data-theme="light"] {
+    background-color: rgb(75, 72, 132);
+    color: #000;
+}
+
+
+[data-theme="light"] nav a::after {
+    background-color: #ffffff;
+}
+
+[data-theme="light"] nav {
+    background-color: #4b4884;
+}
+
+
+[data-theme="light"] button:hover {
+    background-color: #4b4884;
+}
+
+[data-theme="light"] footer {
+    background-color: rgb(75, 72, 132);
+    color: #ffffff;
+}
+
+[data-theme="light"] .back-to-top {
+    background-color: rgba(51, 48, 103, 0.9);
+    color: #ffffff;
+}
+
+[data-theme="light"] .back-to-top:hover {
+    background-color: rgba(75, 72, 132, 0.9);
 }

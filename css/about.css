@@ -510,3 +510,159 @@ p {
 
 
 }
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable all transitions and animations globally */
+    body,
+    html {
+        transition: none;
+    }
+
+    /* Disable transitions on links */
+    #introduction a {
+        transition: none;
+    }
+
+    /* Disable text shadow effects */
+    p,
+    h1,
+    h2 {
+        text-shadow: none;
+    }
+
+    .fade {
+        animation: none;
+    }
+
+    /* Slideshow and image effects */
+    .slideshow-container,
+    .slide img,
+    #thanks img {
+        transition: none;
+    }
+
+    .slide img:hover,
+    #thanks img:hover {
+        transform: none;
+        cursor: default;
+    }
+
+    .slide .overlay-text1 {
+        transition: none;
+
+        /* Always visible */
+    }
+
+    .slide:hover img {
+        opacity: 0.3;
+        /* Remove hover opacity effect */
+    }
+
+    /* FAQ Section */
+    .faq-question {
+        transition: none;
+    }
+
+    .faq-answer {
+        transition: none;
+    }
+
+    .faq-question.active .faq-icon {
+        transition: none;
+        transform: none;
+    }
+
+    /* Carousel */
+    .carousel {
+        transition: none;
+    }
+
+    .carousel-item img,
+    .carousel-item .overlay-text,
+    .carousel-arrow {
+        transition: none;
+    }
+
+    .carousel-item img:hover {
+        opacity: 0.2;
+        /* Remove hover opacity effect */
+    }
+
+
+    .carousel-arrow {
+        transition: none;
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Static color */
+    }
+
+    .carousel-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.7);
+        /* Remove hover effect */
+    }
+
+    /* Popup Images */
+    .popup img {
+        transition: none;
+    }
+
+    /* Rotating animations */
+    .rotate {
+        animation: none;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: auto;
+    }
+
+    /* Skip button */
+    .skip-button {
+        transition: none;
+        transform: none;
+    }
+
+    .skip-button:hover {
+        transform: none;
+        cursor: default;
+    }
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] body,
+[data-theme="light"] html {
+    background-color: #4b4884;
+    color: #fff;
+}
+
+[data-theme="light"] #introduction {
+    background-color: #4b4884;
+    color: #fff;
+}
+
+[data-theme="light"] .carousel-item {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .carousel-arrow {
+    background-color: rgba(75, 72, 132, 0.7);
+    color: #333;
+}
+
+[data-theme="light"] .faq-question {
+    background-color: #f9f9f9;
+}
+
+[data-theme="light"] .faq-question:hover {
+    background-color: #e0e0e0;
+}
+
+[data-theme="light"] .overlay-text1,
+[data-theme="light"] .overlay-text {
+    color: #fff;
+}
+
+[data-theme="light"] .slide img:hover {
+    opacity: 0.2;
+    /* Remove darkening effect */
+}

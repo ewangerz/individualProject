@@ -370,3 +370,131 @@ h2 {
         background-position: 80% 50%;
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+
+    /* Disable all transitions and animations */
+    body,
+    html {
+        transition: none;
+    }
+
+    /* Disable hover effects on skip button */
+    .skip-button {
+        transition: none;
+        transform: none;
+    }
+
+    /* Disable text shadow effects */
+    p,
+    h1,
+    h2 {
+        text-shadow: none;
+    }
+
+    /* Disable image hover effects */
+    .image-container img {
+        transition: none;
+        opacity: 1;
+        /* Ensure images are fully visible */
+    }
+
+    .image-container .overlay-text {
+        transition: none;
+        /* Keep text visible */
+    }
+
+    /* Disable collapsible animations */
+    .collapsible {
+        transition: none;
+    }
+
+    .collapsible-content {
+        max-height: none;
+        /* Fully expanded by default */
+        transition: none;
+    }
+
+    /* Disable popup animations */
+    .popup {
+        transition: none;
+    }
+
+    .popup img {
+        transition: none;
+    }
+
+    .popup .close-popup {
+        transition: none;
+    }
+
+    /* Disable grid image transitions */
+    .grid img {
+        transition: none;
+    }
+
+    /* Remove hover effects globally */
+    button:hover,
+    .skip-button:hover,
+    .collapsible:hover,
+    .image-container:hover img,
+    .popup .close-popup:hover {
+        transition: none;
+        color: inherit;
+        transform: none;
+    }
+
+}
+
+/* Light Mode Overrides */
+[data-theme="light"] body,
+[data-theme="light"] html {
+    background-color: #4b4884;
+    color: #fff;
+}
+
+[data-theme="light"] p,
+[data-theme="light"] h1,
+[data-theme="light"] h2 {
+    text-shadow: none;
+}
+
+
+[data-theme="light"] .skip-button {
+    color: #fff;
+}
+
+[data-theme="light"] .collapsible {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+[data-theme="light"] .collapsible:hover {
+    background-color: #d0d0d0;
+}
+
+[data-theme="light"] .collapsible-content {
+    background-color: #fff;
+}
+
+[data-theme="light"] .popup {
+    background-color: rgba(75, 72, 132, 0.9);
+}
+
+[data-theme="light"] .popup img {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="light"] .image-container img {
+    opacity: 1;
+}
+
+[data-theme="light"] .image-container img:hover {
+    opacity: 0.3;
+}
+
+
+[data-theme="light"] .image-container .overlay-text {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.1);
+}

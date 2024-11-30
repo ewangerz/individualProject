@@ -145,3 +145,24 @@ backToTop.addEventListener('click', () => {
         behavior: 'smooth' // Smooth scrolling
     });
 });
+
+const themeToggle = document.getElementById('theme-toggle');
+const rootElement = document.documentElement; // Refers to the <html> element
+
+// Check and apply saved theme preference from localStorage
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) {
+    rootElement.setAttribute('data-theme', savedTheme);
+}
+
+// Toggle theme on click
+themeToggle.addEventListener('click', () => {
+    const currentTheme = rootElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    // Update the data-theme attribute
+    rootElement.setAttribute('data-theme', newTheme);
+
+    // Save the new theme preference in localStorage
+    localStorage.setItem('theme', newTheme);
+});
