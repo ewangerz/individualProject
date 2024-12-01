@@ -297,6 +297,7 @@ nav {
 
     #preview-people-grid {
         flex-direction: row;
+        text-align: left;
 
     }
 
@@ -319,6 +320,7 @@ nav {
 
     #about-text {
         margin: 30px;
+        text-align: left;
     }
 }
 
